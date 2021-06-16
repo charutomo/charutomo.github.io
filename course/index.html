@@ -4,7 +4,7 @@ title: Courses
 ---
 <div class="course">
 <style>
-  
+
 hr.solid {
   border-top: 3px solid #bbb;
 }
@@ -13,13 +13,52 @@ table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
 }
-</style>
+.accordion {
+  background-color: #e59e9d;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+  transition: 0.4s;
+}
 
+.active, .accordion:hover {
+  background-color: #ffdfdd;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #e59e9d;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: #ffdfdd;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+</style>
+</head>
+<body>
 
 <h1>Courses</h1>
 <hr class="solid">
-<h2>Y1S1</h2>
-<p> Fresh start in university. Here is brief overview of the course taken in Y1S1. Most course were pre-allocated by the school (except for MH9100) in AY2020-2021 Sem 1. Total AU taken: <b>19AU</b> </p>
+<p> Here is brief overview of the courses taken in NTU.</p>
+<button class="accordion"><b>Y1S1</b></button>
+<div class="panel"> <hr class="solid">
+  <p> Fresh start in university. Here is brief overview of the courses taken in Y1S1. Most course were pre-allocated by the school (except for MH9100) in AY2020-2021 Sem 1. Total AU taken: <b>19AU</b> </p>
 
   <div class="separator" style="clear: both;"><a href="https://1.bp.blogspot.com/-auy4FgAFktw/X-cgA9G-9HI/AAAAAAAAB9c/OiNLw9cupQUBJNALj3v_5n1E5tVP2z2bACLcBGAsYHQ/s2048/MicrosoftTeams-image.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="400" data-original-height="1536" data-original-width="2048" src="https://1.bp.blogspot.com/-auy4FgAFktw/X-cgA9G-9HI/AAAAAAAAB9c/OiNLw9cupQUBJNALj3v_5n1E5tVP2z2bACLcBGAsYHQ/s400/MicrosoftTeams-image.png"/></a></div>
   <br>
@@ -166,11 +205,13 @@ table, th, td {
     <td>50%</td>
   </tr>
 </table>
+<hr class="solid">
 <br>
- 
-  <hr class="solid">
-  <h2>Y1S2</h2>
-<p> You can find below the 9 courses that I took in AY2020-2021 Sem 1. Total AU taken: <b>24AU</b> </p>
+</div>
+
+<button class="accordion"><b>Y1S2</b></button>
+<div class="panel"><hr class="solid">
+  <p> You can find below the 9 courses that I took in AY2020-2021 Sem 2. Total AU taken: <b>24AU</b> </p>
   
   <h3>MH1101: Calculus II (CORE)</h3>
 <p>Course AU: 4AU</p>
@@ -264,7 +305,7 @@ table, th, td {
   </table>
 <br>
 
-  <h3>HW0128: Scientific Communication I (CORE)</h3>
+  <h3>HW0128: Scientific Communication I (GER-CORE)</h3>
 <p>Course AU: 2AU</p>
 <table style="width:100%";class="border: 1px solid #dddddd">
 <tr>
@@ -334,19 +375,67 @@ table, th, td {
   </table>
 <br>
 
-<h3>GC0001: Intro to Sustainability (CORE)</h3>
+<h3>GC0001: Intro to Sustainability (GER-CORE)</h3>
 <p>Course AU: 1AU</p>
 <p> Online Module </p>
 <br>
 
-  <h3>HY0001: Ethics & Moral Reasoning (CORE)</h3>
+  <h3>HY0001: Ethics & Moral Reasoning (GER-CORE)</h3>
 <p>Course AU: 1AU</p>
 <p> Online Module </p>
-<br>
-
 <hr class="solid">
- <h2>Y2S1</h2>
-<p> The courses of AY2021-2022 Sem 2 TBC. Total AU taken: <b>TBA</b> </p>
+<br>
 
+</div>
+
+<button class="accordion"><b>Y2S1</b></button>
+<div class="panel"><hr class="solid">
+  <p> These are the courses of AY2021-2022 Sem 1 that I am planning to take. Total AU taken: <b>TBA</b> </p>
+<h3> MH2100: Calculus III (CORE)</h3>
+<p>Course AU: 4AU</p>
+<h3> MH2200: Groups & Symmetries (CORE) </h3>
+<p>Course AU: 3AU</p>
+<h3> MH2500: Probability & Introduction To Statistics (CORE) </h3>
+<p>Course AU: 4AU</p>
+<h3> PS0003: Plan Your Career Path (GER-CORE)</h3>
+<p>Course AU: 1AU</p>
+<h3> PS8001: Defense Science (GER-CORE)</h3>
+<p>Course AU: 3AU</p>
+<h3> ET0001: Enterprise & Innovation (GER-CORE) </h3>
+<p>Course AU: 1AU</p>
+<h3> ML0003: Kickstart Your Career Success (GER-CORE)</h3>
+<p>Course AU: 1AU</p>
+<h3> MH8301: Modern Cryptography: Real-World Applications & Impact(GERPE) </h3>
+<p>Course AU: 3AU</p>
+<hr class="solid">
+</div>
+
+<button class="accordion"><b>Y2S2</b></button>
+<div class="panel">
+<p><i>Coming soon!</i></p>
+</div>
+
+
+
+
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+<hr class="solid">
 
 </div>
